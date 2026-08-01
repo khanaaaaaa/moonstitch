@@ -3,7 +3,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-    --cream: # fdf6ec;
+    --cream: #fdf6ec;
     --blush: #f2c4ce;
     --pink: #d98fa0;
     --lavender: #c9b3d9;
@@ -103,7 +103,7 @@ nav a:hover {
     text-align: center;
     color: var(--blush);
     letter-spacing: 4px;
-    margin: 9rem 0 .7rem;
+    margin: .9rem 0 .7rem;
     font-size: .85rem;
 }
 
@@ -135,4 +135,81 @@ footer {
     font-family: 'Caveat', cursive;
     font-size: 1rem;
     color: var(--muted);
+}
+
+nav a.ctive {
+    background: var(--blush);
+}
+
+.page-title {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--pink);
+    margin-bottom: .2rem;
+}
+
+.card {
+    display: flex;
+    gap: 1rem;
+    padding: .9rem 0;
+    border-bottom: 1px dashed var(--blush);
+}
+
+.card:last-child {
+    border-bottom: none;
+}
+
+.card-img {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 48px;
+    text-align: center;
+}
+
+.card-name {
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: var(--pink);
+}
+
+.card-meta {
+    font-size: .75rem;
+    color: var(--muted);
+    margin: .15rem  0 .3rem;
+}
+
+.card-note {
+    font-size: .83rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.badge {
+    font-family: 'Nunito', sans-serif;
+    font-size: .65rem;
+    background: var(--blush);
+    color: white;
+    padding: .1rem .4rem;
+    border-radius: 8px;
+    vertical-align: middle;
+    animation: blink 1.2s step-start infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.card-img {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--blush);
 }
