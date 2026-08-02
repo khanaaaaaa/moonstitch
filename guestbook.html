@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>about · moonstitch</title>
+        <title>guestbook · moonstitch</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <canvas id="sparkles"></canvas>
+        <canvas id="sprkles"></canvas>
 
         <main>
             <header>
@@ -16,23 +16,25 @@
                 <nav>
                     <a href="index.html">home</a>
                     <a href="projects.html">projects</a>
-                    <a href="about.html" class="active">about</a>
+                    <a href="about.html">about</a>
                     <a href="guestbook.html" class="active">guestbook</a>
                 </nav>
             </header>
 
             <section class="welcome">
-                <p class="page-title">about ✿</p>
+                <p class="page-title">guestbook ✿</p>
                 <div class="divider">· · ✿ · ·</div>
-                <p>
-                    hi! i'm aastha. i started crocheting things a while ago and got completely hooked (bad pun). 
-                </p>
-                <br>
-                <p>
-                    this site is my tiny scrapbook for all of it, just a page i can call mine ♡
-                </p>
+                <p style="font-size:.85rem; margin-bottom:1rem;">leave a little note! i read every single one ♡</p>
             </section>
+
+        <form class="guestbook-form" action="https://formspree.io/f/mpqvgbdk" method="POST">
+            <input type="text" name="name" placeholder="your name" required>
+            <textarea name="message" placeholder="leave a little note ♡" rows="4" required></textarea>
+            <button type="submit">send ✿</button>
+        </form>
         </main>
+
         <footer>made with love and lots of yarn</footer>
+        <script src="script.js"></script>
     </body>
 </html>

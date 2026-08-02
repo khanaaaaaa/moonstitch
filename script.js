@@ -1,10 +1,17 @@
 const popup = document.getElementById('popup');
-if (popup && !sessionStorage.getItem('visited')) {
-    sessionStorage.setItem('visited', '1');
-    setTimeout(() => {
-        popup.style.opacity = '0';
-        setTimeout(() => popup.remove(), 600);
-    }, 2000);
-} else if (popup) {
-    popup.remove();
+const overlay = document.getElementById('overlay');
+
+if (popup && overlay) {
+    if (localStorage.getItem('dismissed')) {
+        popup.remove();
+        overlay.remove();
+    } else {
+        document.getElementById('popup-ok').addEventListener('click', () => {
+            popup.style.opacity = '0';
+            overlay.style.opacity = '0';
+            overlay.style.transition = 'opacity .5s ease';
+            setTimeout(() => { popup.remove(); overlay.remove(); }, 500);
+            localStorage.setItem('dismissed', '1');
+        });
+    }
 }

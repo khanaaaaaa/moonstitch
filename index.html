@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>moonstitch</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <canvas id="sparkles"></canvas>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moonstitch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="sparkles"></canvas>
 
-        <main>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p>welcome! ♡</p>
+        <p class="popup-sub">so glad you're here ˚˖𓍢ִ໋❀</p>
+        <button class="popup-btn" id="popup-ok">okay ✿</button>
+    </div>
 
-            <header>
-                <h1>moonstitch</h1>
-                <p class="tagline">a little corner of the internet</p>
-                <nav>
-                    <a href="#">home</a>
-                    <a href="projects.html">projects</a>
-                    <a href="about.html">about</a>
-                </nav>
-            </header>
-            <section class="welcome">
-                <p>
-                    hi! welcome to my small cozy site.
-                    i crochet flowers, skirts and whatever else that catches my eye.
-                    this is where i keep track of all of it, glad you're here ♡
-                </p>
-                <div class="divider">· · ✿ · ·</div>
-                <ul class="recent">
-                    <li><span class="dot">-`✮´-</span> cat ear beanie<em>- just finished</em></li>
-                    <li><span class="dot">-`✮´-</span> red muffler </li>
-                    <li><span class="dot">-`✮´-</span> four leaf clover </li>
-                </ul>
-            </section>
+    <main>
+        <header>
+            <h1>moonstitch</h1>
+            <p class="tagline">a little corner of the internet</p>
+            <nav>
+                <a href="index.html" class="active">home</a>
+                <a href="projects.html">projects</a>
+                <a href="about.html">about</a>
+                <a href="guestbook.html">guestbook</a>
+            </nav>
+        </header>
 
-        <footer>made with love and lots of yarn</footer>
+        <section class="welcome">
+            <p>
+                hi! welcome to my small cozy site.
+                i crochet flowers, skirts and whatever else that catches my eye.
+                this is where i keep track of all of it, glad you're here ♡
+            </p>
+            <div class="divider">· · ✿ · ·</div>
+            <ul class="recent">
+                <li><span class="dot">-`✮´-</span> cat ear beanie <em>— just finished!</em></li>
+                <li><span class="dot">-`✮´-</span> red muffler</li>
+                <li><span class="dot">-`✮´-</span> four leaf clover clip</li>
+            </ul>
+        </section>
+    </main>
 
-        <div class="popup" id="popup">
-            <p>welcome! ♡</p>
-            <p class="popup-sub">so glad you're here ˚˖𓍢ִ໋❀</p>
-        </div>
+    <footer>made with love and lots of yarn ♡</footer>
 
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
