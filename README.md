@@ -12,7 +12,7 @@ Was just scrolling through TikTok and saw a girl suggesting fellow crocheters an
 
 ## How I Made It
 
-# Tech Stack
+Tech Stack
 - html
 - css
 - javascript
@@ -20,7 +20,7 @@ Was just scrolling through TikTok and saw a girl suggesting fellow crocheters an
 Just brainstormed a lot on what features I want. As it is a simple website, I just implemented simple HTML and CSS knowledge I have.
 
 
-## What I learnt and What I Struggled With
+## What I Learnt & What I Struggled With
 
 The biggest struggle ws the popup, I really struggled with the overlay, took a few tries. I also ran into a browser restriction with cursor image sizes (has to be under 128x128px) which I didn't know about before. Overall, it was really fun and I want to keep adding to it.
 
