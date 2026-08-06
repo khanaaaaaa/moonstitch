@@ -1,3 +1,8 @@
+if (!localStorage.getItem('theme')) {
+    localStorage.setItem('theme', 'dark');
+    document.body.classList.add('dark');
+}
+
 const popup = document.getElementById('popup');
 const overlay = document.getElementById('overlay');
 
@@ -14,4 +19,18 @@ if (popup && overlay) {
             localStorage.setItem('dismissed', '1');
         });
     }
+}
+
+const themeBtn = document.getElementById('theme-btn');
+if (themeBtn) {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+        themeBtn.textContent = '☀️';
+    }
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        themeBtn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
 }

@@ -11,6 +11,38 @@
     --muted: #a08898;
 }
 
+body.dark {
+    --cream: #1e1a2e;
+    --blush: #6b4c6b;
+    --pink: #c084a0;
+    --lavender: #7c6b9e;
+    --text: #e8d8e8;
+    --muted: #a090a8;
+    background-color: #1e1a2e;
+}
+
+body.dark .welcome,
+body.dark .box,
+body.dark .widget,
+body.dark nav a,
+body.dark .popup {
+    background: #2a2040;
+}
+
+.theme-btn {
+    background: none;
+    border: 1.5px solid var(--blush);
+    border-radius: 20px;
+    padding: .2rem .7rem;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: background .15s;
+}
+
+.theme-btn:hover {
+    background: var(--blush);
+}
+
 body {
     background: var(--cream);
     background-image: radial-gradient(var(--blush) 1px, transparent 1px);
