@@ -11,7 +11,7 @@
     --muted: #a08898;
 }
 
-body.dark {
+html.dark body {
     --cream: #1e1a2e;
     --blush: #6b4c6b;
     --pink: #c084a0;
@@ -21,11 +21,10 @@ body.dark {
     background-color: #1e1a2e;
 }
 
-body.dark .welcome,
-body.dark .box,
-body.dark .widget,
-body.dark nav a,
-body.dark .popup {
+html.dark .welcome,
+html.dark nav a,
+html.dark .popup,
+html.dark .popup-btn {
     background: #2a2040;
 }
 
@@ -169,7 +168,7 @@ footer {
     color: var(--muted);
 }
 
-nav a.ctive {
+nav a.active {
     background: var(--blush);
 }
 
@@ -246,25 +245,36 @@ nav a.ctive {
     border: 2px solid var(--blush);
 }
 
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: #fdf6eccc;
+    backdrop-filter: blur(3px);
+    z-index: 199;
+    transition: opacity .5s ease;
+}
+
+html.dark .overlay {
+    background: #1e1a2ecc;
+}
+
 .popup {
     position: fixed;
-    top: 1rem;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: white;
     border: 2px solid var(--blush);
     border-radius: 16px;
-    padding: .9rem 1.6rem;
+    padding: 1.6rem 2rem;
     text-align: center;
     z-index: 200;
     font-family: 'Caveat', cursive;
     font-size: 1.2rem;
     color: var(--pink);
-    box-shadow: 0 4px 20px #f2c4ce44;
+    box-shadow: 0 4px 24px #f2c4ce55;
     transition: opacity .5s ease;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    width: min(300px, 88vw);
 }
 .popup-sub {
     font-size: .9rem;
@@ -364,9 +374,9 @@ guestbook-form textarea:focus {
     transform: translateY(-2px);
 }
 
-body.popup-open main, body.popup-open footer {
-    filter: blur(2px);
-    pointer-events: none;
-}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--pink); }
 
 .img-top { object-position: center top; }
